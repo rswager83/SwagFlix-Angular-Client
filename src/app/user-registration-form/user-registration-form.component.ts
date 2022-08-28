@@ -32,11 +32,11 @@ registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe((result) => {
   // Logic for a successful user registration goes here 
      this.dialogRef.close(); // close on success!
-     this.snackBar.open(result, 'User registered successfully', {
+     this.snackBar.open('User registered successfully', 'Ok', {
         duration: 2000
      });
     }, (result) => {
-      this.snackBar.open(result, 'OK', {
+      this.snackBar.open('Not Signed Up!', '', {
         duration: 2000
       });
     });
