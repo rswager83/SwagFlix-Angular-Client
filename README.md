@@ -1,5 +1,8 @@
 # SwagFlix Angular Client
 
+![Homepage](src/assets/img/Homescreen.png)
+![Dialog View](src/assets/img/Homescreen2.png)
+
 ## Description:
 
 SwagFlix is a movie display application built using Angular and the SwagFlix REST API created for the SwagFlix-Client project.
@@ -23,7 +26,9 @@ can learn more about movies I’ve watched or am interested in.
 
 ## Project Dependencies:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+- Angular
+- TypeScript
+- TypeDoc
 
 ## Development server
 
@@ -48,3 +53,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Contact:
+Please feel free to contact me and offer any type of advice. As I begin my journey through web develeopment, I am always open to advice and helpful ways to accomplish whatever task given to me. Please feel free to reach out to me!
+- Ryan Swager - nanswaglen83@gmail.com
+- Project Link - https://github.com/rswager83/SwagFlix-Angular-Client/
+- GitHub Page -  https://rswager83.github.io/SwagFlix-Angular-Client/
