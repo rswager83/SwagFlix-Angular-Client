@@ -54,14 +54,34 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+### Deploying on Github Pages
+
+1. Create new repository on GitHub
+2. Link the repositiory to the project folder (run inside your project folder)
+``` bash
+git remote add origin https://github.com/<GitHub-username>/<repository-name>.git
+```
+3. Add angular-cli-ghpages
+
+``` bash
+ng add angular-cli-ghpages
+```
+
+4. Build your application
+
+``` bash
+ng deploy --base-href=/<repository-name>/
+```  
+
+
 ### Add TypeDoc 
-First install TypeDoc <br>
+First install TypeDoc, <br>
 
 ``` bash 
 npm install -g typedoc 
 ```
 
-Then run typedoc to create documentation <br>
+then run typedoc to create documentation. <br>
 
 ``` bash 
 typedoc --entryPointStrategy expand ./src 
