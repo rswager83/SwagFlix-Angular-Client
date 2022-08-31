@@ -1,4 +1,27 @@
-# SwagFlixAngularClient
+# SwagFlix Angular Client
+
+## Description:
+
+SwagFlix is a movie display application built using Angular and the SwagFlix REST API created for the SwagFlix-Client project.
+
+## Key Features:
+
+- The app displays a welcome view where users will be able to either log in or register an account.
+- Once authenticated, the user will now view all movies.
+- The app will have a user profile view to allow the user to view, edit, or delete their profile.
+- On every movie-card, buttons will allow additional movie details to be displayed. The movie-card will contain the following additional features:
+  - A button that when clicked, takes a user to the director view. This view will share details about the director of that particular movie.
+  - A button that when clicked, takes a user to the genre view. This view will share details about that genre of the movie.
+  - A button that when clicked, takes a user to the synopsis view. This view will share the movie description.
+  - A button that when clicked, allows the user to add the movie to a list of favorites.
+
+## User Stories:
+
+- As a user, I want to be able to receive information on movies, directors, and genres so that I
+can learn more about movies I’ve watched or am interested in.
+- As a user, I want to be able to create a profile so I can save data about my favorite movies
+
+## Project Dependencies:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
