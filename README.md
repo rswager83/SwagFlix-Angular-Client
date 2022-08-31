@@ -5,7 +5,7 @@
 
 ## Description:
 
-SwagFlix is a movie display application built using Angular and the SwagFlix REST API created for the SwagFlix-Client project.
+SwagFlix is a movie display application built using Angular and uses the SwagFlix REST API created for the SwagFlix-Client project.
 
 ## Key Features:
 
@@ -53,6 +53,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### Add TypeDoc 
+First install TypeDoc <br>
+
+``` bash 
+npm install -g typedoc 
+```
+
+Then run typedoc to create documentation <br>
+
+``` bash 
+typedoc --entryPointStrategy expand ./src 
+```
 
 ## Contact:
 Please feel free to contact me and offer any type of advice. As I begin my journey through web develeopment, I am always open to advice and helpful ways to accomplish whatever task given to me. Please feel free to reach out to me!
