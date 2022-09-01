@@ -1,6 +1,34 @@
-# SwagFlixAngularClient
+# SwagFlix Angular Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+![Homepage](src/assets/img/Homescreen.png)
+![Dialog View](src/assets/img/Homescreen2.png)
+
+## Description:
+
+SwagFlix is a movie display application built using Angular and uses the SwagFlix REST API created for the SwagFlix-Client project.
+
+## Key Features:
+
+- The app displays a welcome view where users will be able to either log in or register an account.
+- Once authenticated, the user will now view all movies.
+- The app will have a user profile view to allow the user to view, edit, or delete their profile.
+- On every movie-card, buttons will allow additional movie details to be displayed. The movie-card will contain the following additional features:
+  - A button that when clicked, takes a user to the director view. This view will share details about the director of that particular movie.
+  - A button that when clicked, takes a user to the genre view. This view will share details about that genre of the movie.
+  - A button that when clicked, takes a user to the synopsis view. This view will share the movie description.
+  - A button that when clicked, allows the user to add the movie to a list of favorites.
+
+## User Stories:
+
+- As a user, I want to be able to receive information on movies, directors, and genres so that I
+can learn more about movies I’ve watched or am interested in.
+- As a user, I want to be able to create a profile so I can save data about my favorite movies
+
+## Project Dependencies:
+
+- Angular
+- TypeScript
+- TypeDoc
 
 ## Development server
 
@@ -25,3 +53,42 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### Deploying on Github Pages
+
+1. Create new repository on GitHub
+2. Link the repositiory to the project folder (run inside your project folder)
+``` bash
+git remote add origin https://github.com/<GitHub-username>/<repository-name>.git
+```
+3. Add angular-cli-ghpages
+
+``` bash
+ng add angular-cli-ghpages
+```
+
+4. Build your application
+
+``` bash
+ng deploy --base-href=/<repository-name>/
+```  
+
+
+### Add TypeDoc 
+First install TypeDoc, <br>
+
+``` bash 
+npm install -g typedoc 
+```
+
+then run typedoc to create documentation. <br>
+
+``` bash 
+typedoc --entryPointStrategy expand ./src 
+```
+
+## Contact:
+Please feel free to contact me and offer any type of advice. As I begin my journey through web develeopment, I am always open to advice and helpful ways to accomplish whatever task given to me. Please feel free to reach out to me!
+- Ryan Swager - nanswaglen83@gmail.com
+- Project Link - https://github.com/rswager83/SwagFlix-Angular-Client/
+- GitHub Page -  https://rswager83.github.io/SwagFlix-Angular-Client/
