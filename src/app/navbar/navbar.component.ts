@@ -20,20 +20,42 @@ export class NavbarComponent implements OnInit {
     this.getUser();
   }
 
+  /**
+   * Routes to movie page - "/movies"
+   * 
+   * @function goToIndex
+   */
+
   goToIndex(): void {
     this.router.navigate(['movies']);
     
   }
+
+  /**
+   * Routes to profile page - "/profile"
+   * 
+   * @function goToProfile
+   */
 
   goToProfile(): void {
     this.router.navigate(['profile'])
 
   }
 
+  /**
+   * Logs user out and routes to welcome page 
+   */
+
   userLogOut(): void {
     localStorage.clear();
     this.router.navigate(['welcome'])
   }
+
+  /**
+   * Get User data from API
+   * 
+   * @function getUser
+   */
 
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {

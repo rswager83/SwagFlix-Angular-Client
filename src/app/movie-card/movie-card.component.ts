@@ -24,6 +24,13 @@ export class MovieCardComponent implements OnInit {
     this.getFavMovies();
   }
 
+  /**
+   * Get movie array from API
+   *
+   * @returns {object[]} - array of movies 
+   * @function getMovies
+   */
+
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -32,9 +39,24 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Used to check if movie is a favorite or not
+   * 
+   * @param id 
+   * @returns {boolean} 
+   * @function isFav
+   */
+
   isFav(id: string): boolean {
     return this.favMovies.includes(id);
   }
+
+  /**
+   * Gets list of favorite movies
+   * 
+   * @returns {object[]} movie array
+   * @function getFavMovies
+   */
 
   getFavMovies(): void {
     this.fetchApiData.getFavMovie().subscribe((resp: any) => {
@@ -43,12 +65,28 @@ export class MovieCardComponent implements OnInit {
     })
   }
 
+  /**
+   * Post new movie to array
+   * 
+   * @returns {object[]} movie array
+   * @param id 
+   * @function addToFav 
+   */
+
   addToFav(id: string): void {
     this.fetchApiData.addFavMovie(id).subscribe((resp: any) => {
       console.log(resp);
       this.ngOnInit();
     });
   }
+
+  /**
+   * Delete movie from array
+   * 
+   * @returns {object[]} movie array
+   * @param id 
+   * @function delFav
+   */
 
   delFav(id: string): void {
     console.log('removed '+ id);
@@ -57,6 +95,15 @@ export class MovieCardComponent implements OnInit {
       this.ngOnInit();
     })
   }
+
+  /**
+   * Dialog opens with genre data
+   * 
+   * @param name 
+   * @param description 
+   * @function openGenreDialog
+   */
+
 
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreComponent, {
@@ -68,6 +115,14 @@ export class MovieCardComponent implements OnInit {
     })
   }
 
+  /**
+   * Dialog opens with director data
+   * 
+   * @param name 
+   * @param bio 
+   * @function openDirectorDialog
+   */
+
   openDirectorDialog(name: string, bio: string): void {
     this.dialog.open (DirectorComponent, {
       data: {
@@ -78,6 +133,14 @@ export class MovieCardComponent implements OnInit {
       width: '480px'
     })
   }
+
+  /**
+   * Dialog opens with movie description
+   * 
+   * @param title 
+   * @param description 
+   * @function openSynopsisDialog
+   */
 
 
   openSynopsisDialog(title: string, description: string): void {

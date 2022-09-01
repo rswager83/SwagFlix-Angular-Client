@@ -8,6 +8,12 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class GenreComponent implements OnInit {
 
+  /**
+   * Injects data from Movie-Card component
+   * 
+   * @param data 
+   */
+
   constructor(
     @Inject(MAT_DIALOG_DATA)
     public data: {

@@ -26,6 +26,12 @@ export class ProfileComponent implements OnInit {
     this.getUser();
   }
 
+  /**
+   * Gets user data from API
+   * 
+   * @function getUser
+   */
+
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
     this.user = resp;
@@ -34,11 +40,23 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens dialog for User-Update component
+   * 
+   * @openUpdateUserDialog
+   */
+
   openUpdateUserDialog(): void {
     this.dialog.open(UserUpdateComponent, {
       width: '440px'
     })
   }
+
+  /**
+   * Deletes user data from API
+   * 
+   * @function deleteUser
+   */
 
   deleteUser(): void {
     if (

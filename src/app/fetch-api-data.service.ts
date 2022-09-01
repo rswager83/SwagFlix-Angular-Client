@@ -31,7 +31,12 @@ export class FetchApiDataService {
     catchError(this.handleError));
     }  
 
-    // Read all movies
+  /**
+   * Get all movies
+   * 
+   * @returns returns array of movies
+   */
+  
   getAllMovies(): Observable<any> {
     const token = localStorage.getItem('token');
     
@@ -45,6 +50,13 @@ export class FetchApiDataService {
       );
     }
 
+  /**
+   * Get single movie
+   * 
+   * @param Title 
+   * @returns movie object
+   */
+
   getMovie(Title: any): Observable<any> {
     const token = localStorage.getItem('token');
     
@@ -57,6 +69,13 @@ export class FetchApiDataService {
       );
     }  
 
+  /**
+   * Get director info
+   * 
+   * @param name 
+   * @returns director object
+   */
+
    getDirector(name: any): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http.get(apiUrl + 'movies/directors/:name', {headers: new HttpHeaders(
@@ -67,7 +86,13 @@ export class FetchApiDataService {
         catchError(this.handleError)
       );
     } 
-    
+  
+  /**
+   * Get genre info
+   * 
+   * @returns genre object
+   */
+
    getGenre(): Observable<any> {
     const token = localStorage.getItem('token');
     return this.http.get(apiUrl + 'movies/genre/:Name', {headers: new HttpHeaders(
@@ -78,6 +103,12 @@ export class FetchApiDataService {
         catchError(this.handleError)
       );
     }  
+
+  /**
+   * Get single user
+   * 
+   * @returns user object
+   */
 
    getUser(): Observable<any> {
     const token = localStorage.getItem('token');
@@ -91,6 +122,12 @@ export class FetchApiDataService {
       );
     }   
 
+  /**
+   * Get favorite movie
+   * 
+   * @returns favorite movies array
+   */
+
    getFavMovie(): Observable<any> {
     const token = localStorage.getItem('token');
     const Username = localStorage.getItem('user');
@@ -102,6 +139,13 @@ export class FetchApiDataService {
         catchError(this.handleError)
       );
     }  
+
+  /**
+   * Adds movie to favorites
+   * 
+   * @param MovieID 
+   * @returns updated favorite movies array
+   */
 
    addFavMovie(MovieID: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -115,6 +159,13 @@ export class FetchApiDataService {
       );
     }  
 
+    /**
+     * Deletes movie from favorites
+     * 
+     * @param MovieID 
+     * @returns updated favorite movies array
+     */
+
    delFavMovie(MovieID: any): Observable<any> {
     const token = localStorage.getItem('token');
     const Username = localStorage.getItem('user');
@@ -126,6 +177,13 @@ export class FetchApiDataService {
         catchError(this.handleError)
       );
     }
+
+  /**
+   * Update user
+   * 
+   * @param updatedUserData 
+   * @returns updated user object 
+   */
 
    updateUser(updatedUserData: any): Observable<any> {
     const token = localStorage.getItem('token');
@@ -139,6 +197,12 @@ export class FetchApiDataService {
       );
     }
     
+  /**
+   * Delete user
+   * 
+   * @returns error/success message
+   */
+
    delUser(): Observable<any> {
     const token = localStorage.getItem('token');
     const Username = localStorage.getItem('user');

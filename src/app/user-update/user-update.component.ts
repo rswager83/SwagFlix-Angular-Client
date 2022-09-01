@@ -11,7 +11,7 @@ import { FetchApiDataService } from '../fetch-api-data.service';
   styleUrls: ['./user-update.component.scss']
 })
 export class UserUpdateComponent implements OnInit {
-  
+
   @Input() userData: any = {};
 
   constructor(
@@ -22,6 +22,12 @@ export class UserUpdateComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  /**
+   * Access API sending POST request to update user profile
+   * 
+   * @function updateAppUser 
+   */
 
   updateAppUser(): void {
     this.fetchApiData.updateUser(this.userData).subscribe((resp:any) => {
